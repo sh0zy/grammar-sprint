@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" fill="none">
+  <rect width="1024" height="1024" fill="#2563eb"/>
+  <text x="512" y="600" font-family="'Hiragino Sans','Noto Sans JP',sans-serif" font-size="460" font-weight="700" fill="#ffffff" text-anchor="middle">文</text>
+  <path d="M250 760 L390 760" stroke="#93c5fd" stroke-width="40" stroke-linecap="round"/>
+  <path d="M442 760 L582 760" stroke="#bfdbfe" stroke-width="40" stroke-linecap="round"/>
+  <path d="M634 760 L774 760" stroke="#dbeafe" stroke-width="40" stroke-linecap="round"/>
+</svg>

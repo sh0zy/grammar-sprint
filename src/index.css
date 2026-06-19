@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply text-neutral-900 antialiased dark:text-neutral-100;
+    -webkit-tap-highlight-color: transparent;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "palt" 1;
+    /* 温かみのある紙の質感（極薄のグラデーション） */
+    background-color: #faf9f7;
+    background-image: radial-gradient(
+      1200px 600px at 50% -10%,
+      #f4f2ee 0%,
+      #faf9f7 55%
+    );
+  }
+  html.dark body {
+    background-color: #0e0d0b;
+    background-image: radial-gradient(
+      1200px 600px at 50% -10%,
+      #1a1815 0%,
+      #0e0d0b 55%
+    );
+  }
+
+  ::selection {
+    background: rgba(65, 73, 168, 0.18);
+  }
+
+  /* タップ時の選択ハイライトを抑制（並べ替えチップなど） */
+  button {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  input,
+  textarea {
+    @apply outline-none;
+  }
+}
+
+@layer utilities {
+  /* iOS セーフエリア対応 */
+  .pb-safe {
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 0.75rem);
+  }
+  .pt-safe {
+    padding-top: calc(env(safe-area-inset-top, 0px) + 0.5rem);
+  }
+}
